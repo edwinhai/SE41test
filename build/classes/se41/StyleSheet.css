@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 19, 2015, 9:33:17 AM
+    Author     : edwin
+*/
+
+.tool-bar{
+    -fx-hgap: 200;   
+    -fx-background-color: #3F3151;
+}
+
+.bodypane {
+    -fx-background-color: #ABA8A8;
+}
+
+.sidebar {
+    -fx-background-color: #EEEEEE;
+}
+
+.imageview{
+    -fx-image-radius: 90,90,90,90;
+}
+
+.topbuttons{
+    -fx-background-color:transparent;
+    -fx-border-width:0;
+}
+
+.sidebarflows{
+    -fx-background-color: #EEEEEE;
+}
+.sidebarflows:hover{
+    -fx-background-color: #7ECCE8;
+}
