@@ -11,7 +11,7 @@
   </resources>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="SE41.jar" size="581416" download="eager" />
+    <jar href="SE41.jar" size="586416" download="eager" />
   </resources>
 <security>
   <all-permissions/>

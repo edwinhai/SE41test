@@ -7,16 +7,23 @@
 package se41;
 
 import static com.sun.org.apache.bcel.internal.util.SecuritySupport.getResourceAsStream;
+import java.io.IOException;
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.fxml.JavaFXBuilderFactory;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 
@@ -36,6 +43,10 @@ public class FXMLDocumentController implements Initializable {
     private Pane paneside;
     @FXML
     private Pane gridPane;
+    @FXML
+    private Pane anchorpane;
+    
+    private Locale language;
     
     private boolean sidebarvisible;
     
@@ -43,10 +54,12 @@ public class FXMLDocumentController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         Image img = new Image(getClass().getClassLoader().getResourceAsStream( "se41/avi.png" ));
+        this.language = Locale.ENGLISH;
         ImagePattern pattern = new ImagePattern(img);
         circleAvatar.getCenterX();
         circleAvatar.setFill(pattern);
         sidebarvisible = true;
+        //paneside.
         showSideBar();
     }    
     
@@ -59,6 +72,28 @@ public class FXMLDocumentController implements Initializable {
             this.paneside.setVisible(true);
         }
         
+    }
+    
+    public void setEnglish() {
+        loadView(Locale.ENGLISH);
+    }
+    
+    public void setDutch() {
+        loadView(Locale.FRENCH);
+    }
+    
+    private void loadView(Locale locale) {
+        try {
+            URL location = getClass().getResource("FXMLDocument.fxml");
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(location);
+            fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
+            fxmlLoader.setResources(ResourceBundle.getBundle("resources.lang", locale));
+            Parent root = (Parent) fxmlLoader.load(location.openStream());
+            anchorpane.getChildren().add(root);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
     
 }
