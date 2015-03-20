@@ -28,7 +28,7 @@ public class SE41 extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(location);
         fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
-        fxmlLoader.setResources(ResourceBundle.getBundle("resources.lang", Locale.GERMAN));
+        fxmlLoader.setResources(ResourceBundle.getBundle("resources.lang", Locale.FRENCH));
         Parent root = (Parent) fxmlLoader.load(location.openStream());
         //Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         

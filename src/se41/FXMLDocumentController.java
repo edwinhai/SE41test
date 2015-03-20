@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,11 +22,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
 
 /**
  *
@@ -63,6 +66,10 @@ public class FXMLDocumentController implements Initializable {
         showSideBar();
     }    
     
+    public void setValues(Locale locale) {
+        this.language = locale;
+    }
+    
     public void showSideBar() {
         if(sidebarvisible){
             sidebarvisible = false;
@@ -75,10 +82,12 @@ public class FXMLDocumentController implements Initializable {
     }
     
     public void setEnglish() {
+        this.language = Locale.ENGLISH;
         loadView(Locale.ENGLISH);
     }
     
     public void setDutch() {
+        this.language = Locale.FRENCH;
         loadView(Locale.FRENCH);
     }
     
@@ -96,4 +105,21 @@ public class FXMLDocumentController implements Initializable {
         }
     }
     
+    @FXML
+    public void toOptions() throws Exception {
+        Application Options = new Options(this.language);
+        Options.start(this.getStage());  
+    }
+    
+    private void toChat() {
+        
+    }
+    
+    private void toForum() {
+        
+    }
+    
+    private Stage getStage() {
+        return (Stage) anchorpane.getScene().getWindow();
+    }
 }

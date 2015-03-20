@@ -11,36 +11,100 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.9999000000025" prefWidth="335.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="se41.FXMLDocumentController">
+<AnchorPane id="AnchorPane" fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.9999000000025" prefWidth="335.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="se41.OptionsController">
   <children>
     <Pane layoutX="0.0" layoutY="0.0" prefHeight="493.0" prefWidth="335.0" styleClass="bodypane">
       <children>
-        <Pane layoutX="-1.0" layoutY="38.0" prefHeight="453.0" prefWidth="336.0">
+        <Pane fx:id="paneMainOptions" layoutX="-1.0" layoutY="38.0" prefHeight="453.0" prefWidth="336.0" visible="true">
           <children>
-            <FlowPane layoutX="0.0" layoutY="0.0" orientation="VERTICAL" prefHeight="453.0" prefWidth="336.0">
+            <FlowPane fx:id="flowpaneMainMain" layoutX="0.0" layoutY="0.0" orientation="VERTICAL" prefHeight="453.0" prefWidth="336.0">
               <children>
-                <FlowPane prefHeight="70.0" prefWidth="336.0">
+                <FlowPane fx:id="flowpaneMainChat" onMouseClicked="#toChatOptions" prefHeight="70.0" prefWidth="336.0">
                   <children>
-                    <Label prefHeight="70.0" prefWidth="191.0" text="Label" />
-                    <CheckBox mnemonicParsing="false" text="CheckBox" />
+                    <Label fx:id="lbChat" prefHeight="70.0" prefWidth="336.0" text="chat" />
                   </children>
                 </FlowPane>
-                <FlowPane prefHeight="70.0" prefWidth="336.0">
+                <FlowPane fx:id="flowpaneMainColors" onMouseClicked="#toColorOptions" prefHeight="70.0" prefWidth="336.0">
                   <children>
-                    <Label prefHeight="70.0" prefWidth="191.0" text="Label" />
-                    <CheckBox mnemonicParsing="false" text="CheckBox" />
+                    <Label fx:id="lblColor" prefHeight="70.0" prefWidth="335.0" text="%kleuren" />
                   </children>
                 </FlowPane>
-                <FlowPane prefHeight="70.0" prefWidth="336.0">
+                <FlowPane fx:id="flowpaneMainProfile" onMouseClicked="#toProfileOptions" prefHeight="70.0" prefWidth="336.0">
                   <children>
-                    <Label prefHeight="70.0" prefWidth="191.0" text="Label" />
-                    <CheckBox mnemonicParsing="false" text="CheckBox" />
+                    <Label fx:id="lblProfile" prefHeight="70.0" prefWidth="335.0" text="%profiel" />
                   </children>
                 </FlowPane>
-                <FlowPane prefHeight="70.0" prefWidth="336.0">
+                <FlowPane fx:id="flowpaneMainLanguage" onMouseClicked="#toLanguageOptions" prefHeight="70.0" prefWidth="336.0">
                   <children>
-                    <Label prefHeight="70.0" prefWidth="190.9998779296875" text="Label" />
-                    <CheckBox mnemonicParsing="false" text="CheckBox" />
+                    <Label fx:id="lblLanguage" prefHeight="70.0" prefWidth="336.0" text="%taal" />
+                  </children>
+                </FlowPane>
+              </children>
+            </FlowPane>
+          </children>
+        </Pane>
+        <Pane id="pane" fx:id="paneChatOptions" layoutX="-1.0" layoutY="38.0" prefHeight="455.0" prefWidth="336.0" visible="false">
+          <children>
+            <FlowPane fx:id="flowpaneChat" layoutX="0.0" layoutY="0.0" orientation="VERTICAL" prefHeight="461.0" prefWidth="335.0">
+              <children>
+                <FlowPane fx:id="flowpaneMute" prefHeight="84.0" prefWidth="335.0">
+                  <children>
+                    <Label fx:id="lblMute" prefHeight="84.0" prefWidth="232.0" text="%stil" />
+                    <CheckBox fx:id="checkboxMute" mnemonicParsing="false" text="%aan" />
+                  </children>
+                </FlowPane>
+                <FlowPane fx:id="flowpaneChatFilter" prefHeight="84.0" prefWidth="335.0">
+                  <children>
+                    <Label fx:id="lblFilter" prefHeight="84.0" prefWidth="232.0" text="filter" />
+                    <CheckBox fx:id="checkboxChatFilter" mnemonicParsing="false" text="%aan" />
+                  </children>
+                </FlowPane>
+              </children>
+            </FlowPane>
+          </children>
+        </Pane>
+        <Pane fx:id="paneProfileOptions" layoutX="-1.0" layoutY="38.0" prefHeight="455.0" prefWidth="336.0" visible="false">
+          <children>
+            <FlowPane fx:id="flowpaneProfile" layoutX="0.0" layoutY="0.0" orientation="VERTICAL" prefHeight="461.0" prefWidth="335.0">
+              <children>
+                <FlowPane fx:id="flowpaneProfileName" prefHeight="84.0" prefWidth="335.0">
+                  <children>
+                    <Label fx:id="lblName" prefHeight="84.0" prefWidth="158.0" text="%naam" />
+                    <TextField fx:id="textfieldName" prefWidth="172.0" />
+                  </children>
+                </FlowPane>
+                <FlowPane fx:id="flowpaneProfilePhoto" prefHeight="84.0" prefWidth="335.0">
+                  <children>
+                    <Label fx:id="lblPhoto" prefHeight="84.0" prefWidth="186.0" text="%foto" />
+                    <Button fx:id="buttonBrowse" mnemonicParsing="false" text="%bladeren" />
+                  </children>
+                </FlowPane>
+              </children>
+            </FlowPane>
+          </children>
+        </Pane>
+        <Pane fx:id="paneColorOptions" layoutX="-2.0" layoutY="38.0" prefHeight="461.0" prefWidth="336.0" visible="false">
+          <children>
+            <FlowPane id="flowpaneColor" fx:id="flowpaneMainColors" layoutX="0.0" layoutY="0.0" orientation="VERTICAL" prefHeight="461.0" prefWidth="335.0">
+              <children>
+                <FlowPane id="flowpaneMain" fx:id="flowpaneColorsColorblind" prefHeight="84.0" prefWidth="335.0">
+                  <children>
+                    <Label fx:id="lblColorblind" prefHeight="84.0" prefWidth="232.0" text="%kleurenblind" />
+                    <CheckBox fx:id="checkboxColorBlind" mnemonicParsing="false" text="%aan" />
+                  </children>
+                </FlowPane>
+              </children>
+            </FlowPane>
+          </children>
+        </Pane>
+        <Pane fx:id="paneLanguageOptions" layoutX="-1.0" layoutY="32.0" prefHeight="461.0" prefWidth="336.0" visible="false">
+          <children>
+            <FlowPane fx:id="flowpaneLanguage" layoutX="0.0" layoutY="6.0" orientation="VERTICAL" prefHeight="455.0" prefWidth="335.0">
+              <children>
+                <FlowPane fx:id="flowpaneLanguageLanguage" minHeight="78.0" prefHeight="78.0" prefWidth="335.0">
+                  <children>
+                    <Label fx:id="lblLanguage2" prefHeight="84.0" prefWidth="201.0" text="%taal" />
+                    <CheckBox fx:id="checkboxEnglish" mnemonicParsing="false" onAction="#switchLanguage" text="%engels" />
                   </children>
                 </FlowPane>
               </children>
@@ -78,7 +142,7 @@
                 </FlowPane>
                 <FlowPane minWidth="301.0" padding="$x1" prefHeight="72.0" prefWidth="301.0000999999975" styleClass="sidebarflows">
                   <children>
-                    <Label prefHeight="72.0" prefWidth="271.0" text="Opties" />
+                    <Label prefHeight="72.0" prefWidth="271.0" text="%opties" />
                   </children>
                   <stylesheets>
                     <URL value="@StyleSheet.css" />
@@ -99,7 +163,7 @@
               </textFill>
             </Button>
             <Pane fx:id="gridPane" />
-            <Button font="$x2" mnemonicParsing="false" prefHeight="28.0" prefWidth="40.0" styleClass="topbuttons" text="&lt;-" textAlignment="LEFT" textFill="$x3" />
+            <Button font="$x2" mnemonicParsing="false" onAction="#backToMain" prefHeight="28.0" prefWidth="40.0" styleClass="topbuttons" text="&lt;-" textAlignment="LEFT" textFill="$x3" />
           </items>
           <stylesheets>
             <URL value="@StyleSheet.css" />
