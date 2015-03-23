@@ -15,57 +15,57 @@
   <children>
     <Pane layoutX="0.0" layoutY="0.0" prefHeight="493.0" prefWidth="335.0" styleClass="bodypane">
       <children>
-        <Pane layoutX="-1.0" layoutY="38.0" prefHeight="453.0" prefWidth="336.0">
+        <Pane fx:id="MainPane" layoutX="-1.0" layoutY="38.0" prefHeight="453.0" prefWidth="336.0" visible="false">
           <children>
             <Label layoutX="37.0" layoutY="31.0" text="Welkom op GoChat Forum" />
-            <Button fx:id="BtnCategorie" layoutX="34.0" layoutY="69.0" mnemonicParsing="false" prefWidth="268.0" text="Categorieën" />
-            <Button fx:id="BtnZoeken" layoutX="34.0" layoutY="107.0" mnemonicParsing="false" prefWidth="268.0" text="Zoeken" />
-            <AnchorPane layoutX="34.0" layoutY="149.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars" visible="true">
+            <Button id="BtnCategorie" fx:id="BtnCategorie1" layoutX="34.0" layoutY="69.0" mnemonicParsing="false" prefWidth="268.0" text="Categorieën" />
+            <Button id="BtnZoeken" fx:id="BtnZoeken1" layoutX="34.0" layoutY="107.0" mnemonicParsing="false" prefWidth="268.0" text="Zoeken" />
+            <Pane fx:id="paneMain1" layoutX="34.0" layoutY="142.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars">
               <children>
-                <ImageView fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="@avi.png" />
-                  </image>
-                </ImageView>
-                <Label layoutX="75.0" layoutY="25.0" text="Discussie GoChat">
+                <Label fx:id="textMainMessage1" layoutX="73.0" layoutY="61.0" text="Waarom GoChat boven Whatsapp" />
+                <Label fx:id="textMainTitle1" layoutX="73.0" layoutY="36.0" text="Discussie GoChat">
                   <font>
                     <Font name="System Bold" size="14.0" fx:id="x4" />
                   </font>
                 </Label>
-                <Label layoutX="75.0" layoutY="52.0" text="Waarom GoChat boven Whatsapp" />
+                <ImageView fx:id="imageMain1" fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@avi.png" />
+                  </image>
+                </ImageView>
               </children>
               <stylesheets>
                 <URL value="@StyleSheet.css" />
               </stylesheets>
-            </AnchorPane>
-            <AnchorPane layoutX="34.0" layoutY="253.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars" visible="true">
+            </Pane>
+            <Pane layoutX="37.0" layoutY="248.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars">
               <children>
-                <ImageView fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <Label fx:id="textMainMessage2" layoutX="73.0" layoutY="61.0" text="Facebook is saai, GoChat is beter" />
+                <Label fx:id="textMainTitle2" font="$x4" layoutX="73.0" layoutY="36.0" text="Discussie Facebook" />
+                <ImageView fx:id="imageMain2" fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                     <Image url="@animal.jpeg" />
                   </image>
                 </ImageView>
-                <Label font="$x4" layoutX="75.0" layoutY="25.0" text="Discussie Facebook" />
-                <Label layoutX="75.0" layoutY="52.0" text="Facebook is saai, GoChat is beter" />
               </children>
               <stylesheets>
                 <URL value="@StyleSheet.css" />
               </stylesheets>
-            </AnchorPane>
-            <AnchorPane layoutX="34.0" layoutY="362.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars" visible="true">
+            </Pane>
+            <Pane layoutX="37.0" layoutY="354.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars">
               <children>
-                <ImageView fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <Label fx:id="textMainMessage3" layoutX="73.0" layoutY="61.0" text="Wat zijn de beste films van 2014" />
+                <Label fx:id="textMainTitle3" font="$x4" layoutX="73.0" layoutY="36.0" text="Discussie Films" />
+                <ImageView fx:id="imageMain3" fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                     <Image url="@animal.jpeg" />
                   </image>
                 </ImageView>
-                <Label font="$x4" layoutX="75.0" layoutY="25.0" text="Discussie Films" />
-                <Label layoutX="75.0" layoutY="52.0" text="Wat zijn de beste films van 2014" />
               </children>
               <stylesheets>
                 <URL value="@StyleSheet.css" />
               </stylesheets>
-            </AnchorPane>
+            </Pane>
           </children>
         </Pane>
         <Pane fx:id="paneside" layoutX="-1.0" layoutY="-1.0" prefHeight="492.9999000000025" prefWidth="301.0" styleClass="sidebar" visible="false">
@@ -126,6 +126,58 @@
             <URL value="@StyleSheet.css" />
           </stylesheets>
         </ToolBar>
+        <Pane fx:id="ZoekPane" layoutX="0.0" layoutY="38.0" prefHeight="453.0" prefWidth="335.0" visible="false">
+          <children>
+            <TextField fx:id="TxtZoeken" layoutX="30.0" layoutY="44.0" prefHeight="28.0" prefWidth="268.0" />
+            <Button fx:id="BtnZoeken2" layoutX="30.0" layoutY="84.0" mnemonicParsing="false" prefWidth="268.0" text="Zoeken" />
+            <Pane fx:id="panaZoek1" layoutX="30.0" layoutY="126.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars">
+              <children>
+                <Label id="textMainMessage1" fx:id="textZoekMessage1" layoutX="73.0" layoutY="61.0" text="Waarom GoChat boven Whatsapp" />
+                <Label id="textMainTitle1" fx:id="textZoekTitle1" font="$x4" layoutX="73.0" layoutY="36.0" text="Discussie GoChat" />
+                <ImageView id="imageMain1" fx:id="imageZoek1" fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@avi.png" />
+                  </image>
+                </ImageView>
+              </children>
+              <stylesheets>
+                <URL value="@StyleSheet.css" />
+              </stylesheets>
+            </Pane>
+            <Pane id="paneMain2" fx:id="paneZoek2" layoutX="30.0" layoutY="232.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars">
+              <children>
+                <Label id="textMainMessage2" fx:id="textZoekMessage2" layoutX="73.0" layoutY="61.0" text="Waarom GoChat boven Whatsapp" />
+                <Label id="textMainTitle2" fx:id="textZoekTitle2" font="$x4" layoutX="73.0" layoutY="36.0" text="Discussie GoChat" />
+                <ImageView id="imageMain2" fx:id="imageZoek2" fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@avi.png" />
+                  </image>
+                </ImageView>
+              </children>
+              <stylesheets>
+                <URL value="@StyleSheet.css" />
+              </stylesheets>
+            </Pane>
+            <Pane id="paneMain3" fx:id="paneZoek3" layoutX="30.0" layoutY="340.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars">
+              <children>
+                <Label id="textMainMessage3" fx:id="textZoekMessage3" layoutX="73.0" layoutY="61.0" text="Waarom GoChat boven Whatsapp" />
+                <Label id="textMainTitle3" fx:id="textZoekTitle3" font="$x4" layoutX="73.0" layoutY="36.0" text="Discussie GoChat" />
+                <ImageView id="imageMain3" fx:id="imageZoek3" fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@avi.png" />
+                  </image>
+                </ImageView>
+              </children>
+              <stylesheets>
+                <URL value="@StyleSheet.css" />
+              </stylesheets>
+            </Pane>
+            <Label layoutX="33.0" layoutY="17.0" text="Zoeken op GoChat Forum" />
+          </children>
+        </Pane>
+        <Pane id="ZoekPane" layoutX="0.0" layoutY="33.0" prefHeight="453.0" prefWidth="335.0" visible="true" />
+        <Pane id="ZoekPane" layoutX="0.0" layoutY="38.0" prefHeight="453.0" prefWidth="335.0" visible="false" />
+        <Pane id="ZoekPane" layoutX="0.0" layoutY="40.0" prefHeight="453.0" prefWidth="335.0" visible="false" />
       </children>
     </Pane>
   </children>
