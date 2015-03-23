@@ -20,12 +20,51 @@
             <Label layoutX="37.0" layoutY="31.0" text="Welkom op GoChat Forum" />
             <Button fx:id="BtnCategorie" layoutX="34.0" layoutY="69.0" mnemonicParsing="false" prefWidth="268.0" text="Categorieën" />
             <Button fx:id="BtnZoeken" layoutX="34.0" layoutY="107.0" mnemonicParsing="false" prefWidth="268.0" text="Zoeken" />
-            <AnchorPane layoutX="34.0" layoutY="149.0" prefHeight="91.0" prefWidth="268.0" visible="true">
+            <AnchorPane layoutX="34.0" layoutY="149.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars" visible="true">
               <children>
-                <ImageView fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                <Label layoutX="75.0" layoutY="25.0" text="Label" />
-                <Label layoutX="75.0" layoutY="52.0" text="Label" />
+                <ImageView fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@avi.png" />
+                  </image>
+                </ImageView>
+                <Label layoutX="75.0" layoutY="25.0" text="Discussie GoChat">
+                  <font>
+                    <Font name="System Bold" size="14.0" fx:id="x4" />
+                  </font>
+                </Label>
+                <Label layoutX="75.0" layoutY="52.0" text="Waarom GoChat boven Whatsapp" />
               </children>
+              <stylesheets>
+                <URL value="@StyleSheet.css" />
+              </stylesheets>
+            </AnchorPane>
+            <AnchorPane layoutX="34.0" layoutY="253.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars" visible="true">
+              <children>
+                <ImageView fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@animal.jpeg" />
+                  </image>
+                </ImageView>
+                <Label font="$x4" layoutX="75.0" layoutY="25.0" text="Discussie Facebook" />
+                <Label layoutX="75.0" layoutY="52.0" text="Facebook is saai, GoChat is beter" />
+              </children>
+              <stylesheets>
+                <URL value="@StyleSheet.css" />
+              </stylesheets>
+            </AnchorPane>
+            <AnchorPane layoutX="34.0" layoutY="362.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars" visible="true">
+              <children>
+                <ImageView fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@animal.jpeg" />
+                  </image>
+                </ImageView>
+                <Label font="$x4" layoutX="75.0" layoutY="25.0" text="Discussie Films" />
+                <Label layoutX="75.0" layoutY="52.0" text="Wat zijn de beste films van 2014" />
+              </children>
+              <stylesheets>
+                <URL value="@StyleSheet.css" />
+              </stylesheets>
             </AnchorPane>
           </children>
         </Pane>

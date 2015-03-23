@@ -31,15 +31,13 @@ public class Forum   extends Application{
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        URL location = getClass().getResource("FXMLForum.fxml");
+        URL location = getClass().getResource("FXMLForumMain.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(location);
         fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
         fxmlLoader.setResources(ResourceBundle.getBundle("resources.lang", this.language));
         Parent root = (Parent) fxmlLoader.load(location.openStream());
         ((OptionsController) fxmlLoader.getController()).setValues(this.language);
-
-        //Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
         

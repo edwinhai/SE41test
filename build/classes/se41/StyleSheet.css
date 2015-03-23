@@ -36,3 +36,11 @@ and open the template in the editor.
 .sidebarflows:hover{
     -fx-background-color: #7ECCE8;
 }
+
+.chatbars {
+    -fx-background-color: #ffffff;
+}
+
+.chatbars:hover{
+    -fx-background-color: #7ECCE8;
+}

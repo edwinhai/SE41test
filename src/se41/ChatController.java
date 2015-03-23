@@ -87,7 +87,7 @@ public class ChatController implements Initializable{
     
     private void loadView(Locale locale) {
         try {
-            URL location = getClass().getResource("FXMLDocument.fxml");
+            URL location = getClass().getResource("FXMLChat.fxml");
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(location);
             fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
