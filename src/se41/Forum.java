@@ -25,7 +25,6 @@ public class Forum   extends Application{
     public Locale language;
     
     public Forum(Locale locale) {
-        System.out.println(locale.toString());
         this.language = locale;
     }
     

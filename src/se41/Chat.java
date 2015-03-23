@@ -25,7 +25,6 @@ public class Chat  extends Application {
     public Locale language;
     
     public Chat(Locale locale) {
-        System.out.println(locale.toString());
         this.language = locale;
     }
     

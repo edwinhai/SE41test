@@ -44,3 +44,8 @@ and open the template in the editor.
 .chatbars:hover{
     -fx-background-color: #7ECCE8;
 }
+
+.ChatLabel {
+    -fx-background-color: #000082;
+    -fx-text-fill: white;
+}

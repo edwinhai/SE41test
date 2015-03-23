@@ -30,7 +30,6 @@ public class Options extends Application {
     public Locale language;
     
     public Options(Locale locale) {
-        System.out.println(locale.toString());
         this.language = locale;
     }
     
