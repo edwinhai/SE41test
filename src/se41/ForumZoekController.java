@@ -113,8 +113,14 @@ public class ForumZoekController implements Initializable {
     
     @FXML
     public void toForum()throws Exception {
-        Application Forum = new Forum(this.language);
+        Application Forum = new Forum(this.language,"Main");
         Forum.start(this.getStage());
+    }
+    @FXML
+    public void Zoek()throws Exception{
+        Application Forum = new Forum(this.language, "Zoek");
+        Forum.start(this.getStage());
+                
     }
     
     private Stage getStage() {

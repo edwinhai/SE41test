@@ -113,7 +113,7 @@ public class ForumMainController implements Initializable {
     
     @FXML
     public void toForum()throws Exception {
-        Application Forum = new Forum(this.language);
+        Application Forum = new Forum(this.language,"Main");
         Forum.start(this.getStage());
     }
     

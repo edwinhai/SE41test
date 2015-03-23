@@ -23,14 +23,37 @@ import javafx.stage.Stage;
 public class Forum   extends Application{
 
     public Locale language;
+    public String forum;
     
-    public Forum(Locale locale) {
+    public Forum(Locale locale, String Forum) {
         this.language = locale;
+        this.forum = Forum;
     }
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        URL location = getClass().getResource("FXMLForumMain.fxml");
+        URL location = null;
+        if(forum.equals("Main"))
+        {
+        location = getClass().getResource("FXMLForumMain.fxml");
+        }
+        else if(forum.equals("Categorie"))
+        {
+        location = getClass().getResource("FXMLForumCategorie.fxml");
+        }
+        else if(forum.equals("Zoek"))
+        {
+        location = getClass().getResource("FXMLForumZoek.fxml");
+        }
+        else if(forum.equals("Chat"))
+            {
+        location = getClass().getResource("FXMLForumChat.fxml");
+        }
+        
+        if(location==null)
+        {
+            location = getClass().getResource("FXMLForumMain.fxml");
+        }
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(location);
         fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
