@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package se41;
 
 import java.net.URL;
@@ -20,28 +19,27 @@ import javafx.stage.Stage;
  *
  * @author Linda
  */
-public class Forum   extends Application{
+public class Forum extends Application {
 
     public Locale language;
-    
+
     public Forum(Locale locale) {
         this.language = locale;
     }
-    
+
     @Override
     public void start(Stage primaryStage) throws Exception {
-        
-          URL location = getClass().getResource("FXMLForumMain.fxml");
 
+        URL location = getClass().getResource("FXMLForumMain.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(location);
         fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
         fxmlLoader.setResources(ResourceBundle.getBundle("resources.lang", this.language));
         Parent root = (Parent) fxmlLoader.load(location.openStream());
-        ((OptionsController) fxmlLoader.getController()).setValues(this.language);
-        
+        ((ForumMainController) fxmlLoader.getController()).setValues(this.language);
+
         Scene scene = new Scene(root);
-        
+
         primaryStage.setScene(scene);
         primaryStage.show();
         primaryStage.setMaxHeight(primaryStage.getHeight());
@@ -49,5 +47,5 @@ public class Forum   extends Application{
         primaryStage.setMinHeight(primaryStage.getHeight());
         primaryStage.setMinWidth(primaryStage.getWidth());
     }
-    
+
 }
