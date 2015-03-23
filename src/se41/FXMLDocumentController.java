@@ -111,12 +111,14 @@ public class FXMLDocumentController implements Initializable {
         Options.start(this.getStage());  
     }
     
-    private void toChat() {
-        
+    public void toChat() throws Exception{
+        Application Chat = new Chat(this.language);
+        Chat.start(this.getStage());
     }
     
-    private void toForum() {
-        
+    public void toForum()throws Exception {
+        Application Forum = new Forum(this.language);
+        Forum.start(this.getStage());
     }
     
     private Stage getStage() {
