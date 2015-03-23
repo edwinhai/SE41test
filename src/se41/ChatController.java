@@ -19,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
@@ -42,8 +43,13 @@ public class ChatController implements Initializable{
     private Pane gridPane;
     @FXML
     private Pane anchorpane;
+    @FXML 
+    private AnchorPane PaneChat;
+    @FXML
+    private Pane PaneChatSummary;
     
     private Locale language;
+    
     
     private boolean sidebarvisible;
     
@@ -87,7 +93,7 @@ public class ChatController implements Initializable{
     
     private void loadView(Locale locale) {
         try {
-            URL location = getClass().getResource("FXMLChat.fxml");
+            URL location = getClass().getResource("FXMLChatOverzicht.fxml");
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(location);
             fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
@@ -119,5 +125,12 @@ public class ChatController implements Initializable{
     
     private Stage getStage() {
         return (Stage) anchorpane.getScene().getWindow();
+    }
+
+    @FXML 
+    public void GoToGesprek() throws Exception{
+        System.out.println("Changin the stuff");
+        this.PaneChat.setVisible(true);
+        this.PaneChatSummary.setVisible(false);
     }
 }

@@ -85,7 +85,7 @@
         </Pane>
         <Pane fx:id="paneColorOptions" layoutX="-2.0" layoutY="38.0" prefHeight="461.0" prefWidth="336.0" visible="false">
           <children>
-            <FlowPane id="flowpaneColor" fx:id="flowpaneMainColors" layoutX="0.0" layoutY="0.0" orientation="VERTICAL" prefHeight="461.0" prefWidth="335.0">
+            <FlowPane id="flowpaneColor" fx:id="flowpaneColorsMainColors" layoutX="0.0" layoutY="0.0" orientation="VERTICAL" prefHeight="461.0" prefWidth="335.0">
               <children>
                 <FlowPane id="flowpaneMain" fx:id="flowpaneColorsColorblind" prefHeight="84.0" prefWidth="335.0">
                   <children>

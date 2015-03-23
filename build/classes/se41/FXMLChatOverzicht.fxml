@@ -11,11 +11,11 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.9999000000025" prefWidth="335.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="se41.FXMLDocumentController">
+<AnchorPane id="AnchorPane" fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.9999000000025" prefWidth="335.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="se41.ChatController">
   <children>
     <Pane layoutX="0.0" layoutY="0.0" prefHeight="493.0" prefWidth="335.0" styleClass="bodypane">
       <children>
-        <Pane layoutX="-1.0" layoutY="38.0" prefHeight="453.0" prefWidth="336.0">
+        <Pane fx:id="PaneChatSummary" layoutX="-1.0" layoutY="38.0" prefHeight="453.0" prefWidth="336.0" visible="true">
           <children>
             <Label layoutX="14.0" layoutY="6.0" text="Chats">
               <font>
@@ -27,64 +27,100 @@
                 <Font size="20.0" />
               </font>
             </Label>
-            <AnchorPane layoutX="10.0" layoutY="43.0" prefHeight="73.0" prefWidth="310.0" styleClass="chatbars">
+            <AnchorPane layoutX="3.0" layoutY="0.0" prefHeight="443.9998779296875" prefWidth="335.0">
               <children>
-                <Label font="$x4" layoutX="14.0" layoutY="14.0" text="Edwin" />
-                <Label layoutX="14.0" layoutY="43.0" text="&gt; Hallo Linda!" />
-                <ImageView fitHeight="38.0" fitWidth="50.666666666666664" layoutX="258.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="@../resources/Contact.png" />
-                  </image>
-                </ImageView>
+                <AnchorPane layoutX="11.0" layoutY="125.0" onMouseClicked="#GoToGesprek" prefHeight="73.0" prefWidth="310.0" styleClass="chatbars">
+                  <children>
+                    <Label font="$x4" layoutX="14.0" layoutY="13.0" text="Linda" />
+                    <Label layoutX="14.0" layoutY="43.0" text="&gt; Hallo Pietje" />
+                    <ImageView fitHeight="38.0" fitWidth="50.666666666666664" layoutX="258.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../resources/Contact.png" />
+                      </image>
+                    </ImageView>
+                  </children>
+                  <stylesheets>
+                    <URL value="@StyleSheet.css" />
+                  </stylesheets>
+                </AnchorPane>
+                <AnchorPane layoutX="11.0" layoutY="208.0" onMouseClicked="#GoToGesprek" prefHeight="73.0" prefWidth="310.0" styleClass="chatbars">
+                  <children>
+                    <Label font="$x4" layoutX="14.0" layoutY="13.0" text="Pap" />
+                    <Label layoutX="14.0" layoutY="43.0" text="&gt; Hallo !!!" />
+                    <ImageView fitHeight="38.0" fitWidth="50.666666666666664" layoutX="258.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../resources/Contact.png" />
+                      </image>
+                    </ImageView>
+                  </children>
+                  <stylesheets>
+                    <URL value="@StyleSheet.css" />
+                  </stylesheets>
+                </AnchorPane>
+                <AnchorPane layoutX="11.0" layoutY="291.0" onMouseClicked="#GoToGesprek" prefHeight="73.0" prefWidth="310.0" styleClass="chatbars">
+                  <children>
+                    <Label font="$x4" layoutX="14.0" layoutY="13.0" text="Willem" />
+                    <Label layoutX="14.0" layoutY="43.0" text="&gt; Oi m8 u ok" />
+                    <ImageView fitHeight="38.0" fitWidth="50.666666666666664" layoutX="258.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../resources/Contact.png" />
+                      </image>
+                    </ImageView>
+                  </children>
+                  <stylesheets>
+                    <URL value="@StyleSheet.css" />
+                  </stylesheets>
+                </AnchorPane>
+                <AnchorPane layoutX="11.0" layoutY="42.0" onMouseClicked="#GoToGesprek" prefHeight="73.0" prefWidth="310.0" styleClass="chatbars">
+                  <children>
+                    <Label font="$x4" layoutX="14.0" layoutY="14.0" text="Edwin" />
+                    <Label layoutX="14.0" layoutY="43.0" text="&gt; Hallo henk!" />
+                    <ImageView fitHeight="38.0" fitWidth="50.666666666666664" layoutX="258.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../resources/Contact.png" />
+                      </image>
+                    </ImageView>
+                  </children>
+                  <stylesheets>
+                    <URL value="@StyleSheet.css" />
+                  </stylesheets>
+                </AnchorPane>
               </children>
-              <stylesheets>
-                <URL value="@StyleSheet.css" />
-              </stylesheets>
-            </AnchorPane>
-            <AnchorPane layoutX="11.0" layoutY="126.0" prefHeight="73.0" prefWidth="310.0" styleClass="chatbars">
-              <children>
-                <Label font="$x4" layoutX="14.0" layoutY="13.0" text="Linda" />
-                <Label layoutX="14.0" layoutY="43.0" text="&gt; Hallo Edwin!" />
-                <ImageView fitHeight="38.0" fitWidth="50.666666666666664" layoutX="258.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="@../resources/Contact.png" />
-                  </image>
-                </ImageView>
-              </children>
-              <stylesheets>
-                <URL value="@StyleSheet.css" />
-              </stylesheets>
-            </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="210.0" prefHeight="73.0" prefWidth="310.0" styleClass="chatbars">
-              <children>
-                <Label font="$x4" layoutX="14.0" layoutY="13.0" text="Willem" />
-                <Label layoutX="14.0" layoutY="43.0" text="&gt; Hallo Pap" />
-                <ImageView fitHeight="38.0" fitWidth="50.666666666666664" layoutX="258.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="@../resources/Contact.png" />
-                  </image>
-                </ImageView>
-              </children>
-              <stylesheets>
-                <URL value="@StyleSheet.css" />
-              </stylesheets>
-            </AnchorPane>
-            <AnchorPane layoutX="11.0" layoutY="293.0" prefHeight="73.0" prefWidth="310.0" styleClass="chatbars">
-              <children>
-                <Label font="$x4" layoutX="14.0" layoutY="13.0" text="Pap" />
-                <Label layoutX="14.0" layoutY="43.0" text="&gt; Hallo Willem" />
-                <ImageView fitHeight="38.0" fitWidth="50.666666666666664" layoutX="258.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="@../resources/Contact.png" />
-                  </image>
-                </ImageView>
-              </children>
-              <stylesheets>
-                <URL value="@StyleSheet.css" />
-              </stylesheets>
             </AnchorPane>
           </children>
         </Pane>
+        <AnchorPane id="GesprekPane" fx:id="PaneChat" layoutX="0.0" layoutY="38.0" prefHeight="450.0" prefWidth="335.0" visible="false">
+          <children>
+            <AnchorPane layoutX="11.0" layoutY="57.0" prefHeight="334.0" prefWidth="313.0" styleClass="chatfield">
+              <children>
+                <Label layoutX="17.0" layoutY="23.0" styleClass="ChatLabel" text="Hallo Edwin!">
+                  <font>
+                    <Font size="16.0" />
+                  </font>
+                  <stylesheets>
+                    <URL value="@StyleSheet.css" />
+                  </stylesheets>
+                </Label>
+              </children>
+              <stylesheets>
+                <URL value="@StyleSheet.css" />
+              </stylesheets>
+            </AnchorPane>
+            <Label font="$x4" layoutX="14.0" layoutY="14.0" prefWidth="61.0" text="Edwin" />
+            <ImageView fitHeight="38.0" fitWidth="50.666666666666664" layoutX="236.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../resources/Contact.png" />
+              </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="50.666666666666664" layoutX="283.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../resources/115757-magic-marker-icon-people-things-hand22-sc48.png" />
+              </image>
+            </ImageView>
+            <TextField layoutX="11.0" layoutY="399.0" prefHeight="42.0" prefWidth="239.0" promptText="%TypeHere" />
+            <Button font="$x4" layoutX="263.0" layoutY="399.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="60.9998779296875" text="&gt;" />
+          </children>
+        </AnchorPane>
         <Pane fx:id="paneside" layoutX="-1.0" layoutY="-1.0" prefHeight="492.9999000000025" prefWidth="301.0" styleClass="sidebar" visible="false">
           <children>
             <FlowPane layoutX="0.0" layoutY="39.0" orientation="VERTICAL" prefHeight="453.0" prefWidth="301.0">
@@ -97,7 +133,7 @@
                 </FlowPane>
                 <FlowPane minWidth="301.0" prefHeight="66.0" prefWidth="301.0" styleClass="sidebarflows">
                   <children>
-                    <Label prefHeight="66.0" prefWidth="271.0" text="Chat" />
+                    <Label onMouseClicked="#toChat" prefHeight="66.0" prefWidth="271.0" text="Chat" />
                   </children>
                   <padding>
                     <Insets left="30.0" fx:id="x1" />
@@ -108,7 +144,7 @@
                 </FlowPane>
                 <FlowPane minWidth="301.0" padding="$x1" prefHeight="72.0" prefWidth="301.0" styleClass="sidebarflows">
                   <children>
-                    <Label prefHeight="72.0" prefWidth="301.0" text="Forum" />
+                    <Label onMouseClicked="#toForum" prefHeight="72.0" prefWidth="301.0" text="Forum" />
                   </children>
                   <stylesheets>
                     <URL value="@StyleSheet.css" />
@@ -116,7 +152,7 @@
                 </FlowPane>
                 <FlowPane minWidth="301.0" onMouseClicked="#toOptions" padding="$x1" prefHeight="72.0" prefWidth="301.0000999999975" styleClass="sidebarflows">
                   <children>
-                    <Label prefHeight="72.0" prefWidth="271.0" text="%opties" />
+                    <Label onMouseClicked="#toOptions" prefHeight="72.0" prefWidth="271.0" text="%opties" />
                   </children>
                   <stylesheets>
                     <URL value="@StyleSheet.css" />

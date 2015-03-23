@@ -49,3 +49,7 @@ and open the template in the editor.
     -fx-background-color: #000082;
     -fx-text-fill: white;
 }
+
+.chatfield {
+    -fx-background-color: #ffffff;
+}

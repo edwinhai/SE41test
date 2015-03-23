@@ -36,7 +36,7 @@ public class Chat  extends Application {
         fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
         fxmlLoader.setResources(ResourceBundle.getBundle("resources.lang", this.language));
         Parent root = (Parent) fxmlLoader.load(location.openStream());
-        ((OptionsController) fxmlLoader.getController()).setValues(this.language);
+        ((ChatController) fxmlLoader.getController()).setValues(this.language);
 
         //Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
