@@ -28,7 +28,7 @@ import javafx.stage.Stage;
  *
  * @author Linda
  */
-public class ForumController implements Initializable {
+public class ForumMainController implements Initializable {
     
     @FXML
     private Label label;
