@@ -7,16 +7,23 @@ package se41;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
@@ -35,6 +42,12 @@ public class ForumMainController implements Initializable {
     private Circle circleAvatar;
     @FXML
     private Button buttonshowsidebar;
+    @FXML
+    private ListView lbCategorieen;
+    @FXML
+    private ChoiceBox cbCategorienNieuw;
+    
+
     //panes van berichten
     @FXML
     private Pane paneMain1;
@@ -76,8 +89,10 @@ public class ForumMainController implements Initializable {
     private Pane anchorpane;
 
     private Locale language;
-    private String locatie = "Main";
+    private String locatieNu = "Main";
     private boolean sidebarvisible;
+    
+    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -90,6 +105,7 @@ public class ForumMainController implements Initializable {
         sidebarvisible = true;
         //paneside.
         showSideBar();
+        
     }
 
     public void setValues(Locale locale) {
@@ -150,28 +166,86 @@ public class ForumMainController implements Initializable {
 
     @FXML
     public void toZoek() throws Exception {
-        this.locatie = "Zoek";
-        this.paneMain.setVisible(false);
+        this.locatieNu = "Zoek";
+        allePanesFalse();
         this.paneZoek.setVisible(true);
+    }
+    
+    @FXML
+    public void zoeken()
+    {
+        paneZoek1.setVisible(true);
+        paneZoek2.setVisible(true);
+        paneZoek3.setVisible(true);
     }
 
     @FXML
     public void toCategorie() throws Exception {
-        this.locatie = "Categorie";
+        this.locatieNu = "Categorie";
+        allePanesFalse();
         this.paneCategorieen.setVisible(true);
-        this.paneMain.setVisible(false);
     }
 
+    @FXML
+    public void categorie() {
+        this.locatieNu = "Overzicht";
+        allePanesFalse();
+        paneCategorieOverzicht.setVisible(true);
+        
+        paneCategorie1.setVisible(true);
+        paneCategorie2.setVisible(true);
+        paneCategorie3.setVisible(true);
+    }
+
+    @FXML
+    public void toBericht() {
+        if (this.locatieNu.equals("Zoek")) {
+            this.locatieNu = "Zoek-Bericht";
+        } else if (this.locatieNu.equals("Categorie")) {
+            this.locatieNu = "Categorie-Bericht";
+        } else if (this.locatieNu.equals("Main")) {
+            this.locatieNu = "Main-Bericht";
+        }
+        allePanesFalse();
+        paneBericht.setVisible(true);
+    }
+
+    @FXML
+    public void toNieuw() {
+
+        this.locatieNu = "Nieuw";
+        allePanesFalse();
+        paneNieuw.setVisible(true);
+    }
+
+    @FXML
+    public void Back() {
+        allePanesFalse();
+        if (this.locatieNu.equals("Zoek-Bericht")) {
+            this.locatieNu = "Zoek";
+            
+            paneZoek.setVisible(true);
+            paneZoek1.setVisible(true);
+            paneZoek2.setVisible(true);
+            paneZoek3.setVisible(true);
+        } else if (this.locatieNu.equals("Categorie-Bericht")) {
+            this.locatieNu = "Categorie";
+            
+            paneCategorieOverzicht.setVisible(true);
+            paneCategorie1.setVisible(true);
+            paneCategorie2.setVisible(true);
+            paneCategorie3.setVisible(true);
+        } else {
+            this.locatieNu = "Main";
+            paneMain.setVisible(true);
+        }
+    }
+
+
     private void allePanesFalse() {
-        paneMain1.setVisible(false);
-        paneMain2.setVisible(false);
-        paneMain3.setVisible(false);
         paneZoek1.setVisible(false);
         paneZoek2.setVisible(false);
         paneZoek3.setVisible(false);
-        paneCategorie1.setVisible(false);
-        paneCategorie2.setVisible(false);
-        paneCategorie3.setVisible(false);
         paneside.setVisible(false);
         paneMain.setVisible(false);
         paneZoek.setVisible(false);
@@ -179,6 +253,13 @@ public class ForumMainController implements Initializable {
         paneBericht.setVisible(false);
         paneNieuw.setVisible(false);
         paneCategorieOverzicht.setVisible(false);
+        
+        //vullen listview en choicebox
+        ObservableList<String> categorieen = FXCollections.observableArrayList(
+          "Fun", "Animals", "Music", "Cars", "Dans");
+        this.lbCategorieen.setItems(categorieen);
+        
+        this.cbCategorienNieuw.setItems(categorieen);
     }
 
     private Stage getStage() {
