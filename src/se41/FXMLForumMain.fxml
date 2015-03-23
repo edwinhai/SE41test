@@ -16,11 +16,11 @@
   <children>
     <Pane layoutX="0.0" layoutY="0.0" prefHeight="493.0" prefWidth="335.0" styleClass="bodypane">
       <children>
-        <Pane fx:id="MainPane" layoutX="0.0" layoutY="38.0" prefHeight="453.0" prefWidth="336.0" visible="true">
+        <Pane id="MainPane" fx:id="paneMain" layoutX="0.0" layoutY="38.0" prefHeight="453.0" prefWidth="336.0" visible="false">
           <children>
             <Label layoutX="33.0" layoutY="17.0" text="Welkom op GoChat Forum" />
-            <Button id="BtnCategorie" fx:id="BtnCategorie1" layoutX="34.0" layoutY="49.0" mnemonicParsing="false" prefWidth="268.0" text="Categorieën" />
-            <Button id="BtnZoeken" fx:id="BtnZoeken1" layoutX="34.0" layoutY="86.0" mnemonicParsing="false" prefWidth="268.0" text="Zoeken" />
+            <Button id="BtnCategorie" fx:id="BtnCategorie1" layoutX="34.0" layoutY="49.0" mnemonicParsing="false" onMouseClicked="#toCategorie" prefWidth="268.0" text="Categorieën" />
+            <Button id="BtnZoeken" fx:id="BtnZoeken1" layoutX="34.0" layoutY="86.0" mnemonicParsing="false" onMouseClicked="#toZoek" prefWidth="268.0" text="Zoeken" />
             <Pane fx:id="paneMain1" layoutX="34.0" layoutY="142.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars">
               <children>
                 <Label fx:id="textMainMessage1" layoutX="73.0" layoutY="61.0" text="Waarom GoChat boven Whatsapp" />
@@ -127,11 +127,11 @@
             <URL value="@StyleSheet.css" />
           </stylesheets>
         </ToolBar>
-        <Pane fx:id="ZoekPane" layoutX="0.0" layoutY="38.0" prefHeight="453.0" prefWidth="335.0" visible="false">
+        <Pane id="ZoekPane" fx:id="paneZoek" layoutX="0.0" layoutY="38.0" prefHeight="453.0" prefWidth="335.0" visible="false">
           <children>
             <TextField fx:id="TxtZoeken" layoutX="30.0" layoutY="44.0" prefHeight="28.0" prefWidth="268.0" />
             <Button fx:id="BtnZoeken2" layoutX="30.0" layoutY="84.0" mnemonicParsing="false" prefWidth="268.0" text="Zoeken" />
-            <Pane fx:id="panaZoek1" layoutX="30.0" layoutY="126.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars">
+            <Pane id="panaZoek1" fx:id="paneZoek1" layoutX="30.0" layoutY="126.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars">
               <children>
                 <Label id="textMainMessage1" fx:id="textZoekMessage1" layoutX="73.0" layoutY="61.0" text="Waarom GoChat boven Whatsapp" />
                 <Label id="textMainTitle1" fx:id="textZoekTitle1" font="$x4" layoutX="73.0" layoutY="36.0" text="Discussie GoChat" />
@@ -242,12 +242,12 @@
             <ListView fx:id="lbCategorieën" layoutX="33.0" layoutY="61.0" prefHeight="368.9998779296875" prefWidth="270.0" />
           </children>
         </Pane>
-        <Pane id="ZoekPane" fx:id="paneCategorieOverzicht" layoutX="1.0" layoutY="39.0" prefHeight="453.0" prefWidth="335.0" visible="false">
+        <Pane id="ZoekPane" fx:id="paneCategorieOverzicht" layoutX="1.0" layoutY="39.0" prefHeight="453.0" prefWidth="335.0" visible="true">
           <children>
             <Pane id="panaZoek1" layoutX="34.0" layoutY="272.0" prefHeight="96.0" prefWidth="268.0" styleClass="chatbars">
               <children>
                 <Label id="textMainMessage1" layoutX="73.0" layoutY="61.0" text="Waarom GoChat boven Whatsapp" />
-                <Label id="textMainTitle1" font="$x4" layoutX="73.0" layoutY="36.0" text="Discussie GoChat" />
+                <Label id="textMainTitle1" fx:id="paneCategorie3" font="$x4" layoutX="73.0" layoutY="36.0" text="Discussie GoChat" />
                 <ImageView id="imageMain1" fitHeight="29.999984941984856" fitWidth="39.99998092651367" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                     <Image url="@avi.png" />
@@ -258,7 +258,7 @@
                 <URL value="@StyleSheet.css" />
               </stylesheets>
             </Pane>
-            <Pane id="panaZoek1" layoutX="34.0" layoutY="46.0" prefHeight="96.0" prefWidth="268.0" styleClass="chatbars">
+            <Pane id="panaZoek1" fx:id="paneCategorie1" layoutX="34.0" layoutY="46.0" prefHeight="96.0" prefWidth="268.0" styleClass="chatbars">
               <children>
                 <Label id="textMainMessage1" layoutX="73.0" layoutY="61.0" text="Waarom GoChat boven Whatsapp" />
                 <Label id="textMainTitle1" font="$x4" layoutX="73.0" layoutY="36.0" text="Discussie GoChat" />
@@ -272,7 +272,7 @@
                 <URL value="@StyleSheet.css" />
               </stylesheets>
             </Pane>
-            <Pane id="panaZoek1" layoutX="33.0" layoutY="158.0" prefHeight="96.0" prefWidth="268.0" styleClass="chatbars">
+            <Pane id="panaZoek1" fx:id="paneCategorie2" layoutX="33.0" layoutY="158.0" prefHeight="96.0" prefWidth="268.0" styleClass="chatbars">
               <children>
                 <Label id="textMainMessage1" layoutX="73.0" layoutY="61.0" text="Waarom GoChat boven Whatsapp" />
                 <Label id="textMainTitle1" font="$x4" layoutX="73.0" layoutY="36.0" text="Discussie GoChat" />

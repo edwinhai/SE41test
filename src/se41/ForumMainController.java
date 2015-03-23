@@ -39,12 +39,24 @@ public class ForumMainController implements Initializable {
     @FXML
     private Pane paneside;
     @FXML
+    private Pane paneMain;
+    @FXML
+    private Pane paneZoek;
+    @FXML
+    private Pane paneCategorieen;
+    @FXML
+    private Pane paneBericht;
+    @FXML
+    private Pane paneNieuw;
+    @FXML
+    private Pane paneCategorieOverzicht;
+    @FXML
     private Pane gridPane;
     @FXML
     private Pane anchorpane;
     
     private Locale language;
-    
+    private String locatie="Main";
     private boolean sidebarvisible;
     
     @Override
@@ -113,14 +125,20 @@ public class ForumMainController implements Initializable {
     
     @FXML
     public void toForum()throws Exception {
-        Application Forum = new Forum(this.language);
-        Forum.start(this.getStage());
+        
     }
     @FXML
-    public void Zoek()throws Exception{
-        Application Forum = new Forum(this.language);
-        Forum.start(this.getStage());
-                
+    public void toZoek()throws Exception{
+        this.locatie="Zoek";
+        this.paneMain.setVisible(false);
+        this.paneZoek.setVisible(true);
+    }
+    
+    @FXML
+    public void toCategorie() throws Exception{
+        this.locatie="Categorie";
+        this.paneCategorieen.setVisible(true);
+        this.paneMain.setVisible(false);
     }
     
     private Stage getStage() {

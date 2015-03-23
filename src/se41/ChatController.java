@@ -47,6 +47,8 @@ public class ChatController implements Initializable{
     private AnchorPane PaneChat;
     @FXML
     private Pane PaneChatSummary;
+    @FXML
+    private Pane PaneProfile;
     
     private Locale language;
     
@@ -132,5 +134,31 @@ public class ChatController implements Initializable{
         System.out.println("Changin the stuff");
         this.PaneChat.setVisible(true);
         this.PaneChatSummary.setVisible(false);
+        this.PaneProfile.setVisible(false);
+    }
+    
+    @FXML
+    public void showProfile() {
+        this.PaneChat.setVisible(false);
+        this.PaneChatSummary.setVisible(false);
+        this.PaneProfile.setVisible(true);
+    }
+    
+    @FXML
+    public void showSummary() {
+        this.PaneChat.setVisible(false);
+        this.PaneChatSummary.setVisible(true);
+        this.PaneProfile.setVisible(false);
+    }
+    
+    @FXML
+    public void returnToPrevious() {
+        if (this.PaneChat.isVisible()) {
+            showSummary();
+        } else if (this.PaneProfile.isVisible()) {
+            showSummary();
+        } else {
+            showSideBar();
+        }
     }
 }
