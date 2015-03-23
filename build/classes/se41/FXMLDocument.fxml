@@ -36,7 +36,7 @@
                 </FlowPane>
                 <FlowPane minWidth="301.0" prefHeight="66.0" prefWidth="301.0" styleClass="sidebarflows">
                   <children>
-                    <Label prefHeight="66.0" prefWidth="271.0" text="Chat" />
+                    <Label onMouseClicked="#toChat" prefHeight="66.0" prefWidth="271.0" text="Chat" />
                   </children>
                   <padding>
                     <Insets left="30.0" fx:id="x1" />
@@ -47,7 +47,7 @@
                 </FlowPane>
                 <FlowPane minWidth="301.0" padding="$x1" prefHeight="72.0" prefWidth="301.0" styleClass="sidebarflows">
                   <children>
-                    <Label prefHeight="72.0" prefWidth="301.0" text="Forum" />
+                    <Label onMouseClicked="#toForum" prefHeight="72.0" prefWidth="301.0" text="Forum" />
                   </children>
                   <stylesheets>
                     <URL value="@StyleSheet.css" />
@@ -76,7 +76,6 @@
               </textFill>
             </Button>
             <Pane fx:id="gridPane" />
-            <Button font="$x2" mnemonicParsing="false" prefHeight="28.0" prefWidth="40.0" styleClass="topbuttons" text="&lt;-" textAlignment="LEFT" textFill="$x3" />
           </items>
           <stylesheets>
             <URL value="@StyleSheet.css" />

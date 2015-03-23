@@ -30,7 +30,7 @@ public class Chat  extends Application {
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        URL location = getClass().getResource("FXMLChat.fxml");
+        URL location = getClass().getResource("FXMLChatOverzicht.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(location);
         fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
@@ -50,4 +50,10 @@ public class Chat  extends Application {
         primaryStage.setMinWidth(primaryStage.getWidth());
     }
     
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
