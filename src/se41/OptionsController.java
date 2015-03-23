@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -227,12 +228,16 @@ public class OptionsController implements Initializable  {
         }
     }
     
-    private void toChat() {
-        
+    @FXML
+    public void toChat() throws Exception{
+        Application Chat = new Chat(this.language);
+        Chat.start(this.getStage());
     }
     
-    private void toForum() {
-        
+    @FXML
+    public void toForum()throws Exception {
+        Application Forum = new Forum(this.language);
+        Forum.start(this.getStage());
     }
     
     private Stage getStage() {
