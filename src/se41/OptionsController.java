@@ -236,7 +236,7 @@ public class OptionsController implements Initializable  {
     
     @FXML
     public void toForum()throws Exception {
-        Application Forum = new Forum(this.language,"Main");
+        Application Forum = new Forum(this.language);
         Forum.start(this.getStage());
     }
     
