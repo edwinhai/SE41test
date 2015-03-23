@@ -113,8 +113,8 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     public void toForum()throws Exception {
-        Application Forum = new Forum(this.language);
-        Forum.start(this.getStage());
+        Application forum = new Forum(this.language);
+        forum.start(this.getStage());
     }
     
     private Stage getStage() {

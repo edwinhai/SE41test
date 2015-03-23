@@ -12,15 +12,15 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.9999000000025" prefWidth="335.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="se41.FXMLForumMainController">
+<AnchorPane id="AnchorPane" fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.9999000000025" prefWidth="335.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="se41.ForumMainController">
   <children>
     <Pane layoutX="0.0" layoutY="0.0" prefHeight="493.0" prefWidth="335.0" styleClass="bodypane">
       <children>
-        <Pane fx:id="MainPane" layoutX="-1.0" layoutY="38.0" prefHeight="453.0" prefWidth="336.0" visible="false">
+        <Pane fx:id="MainPane" layoutX="0.0" layoutY="38.0" prefHeight="453.0" prefWidth="336.0" visible="true">
           <children>
             <Label layoutX="33.0" layoutY="17.0" text="Welkom op GoChat Forum" />
-            <Button id="BtnCategorie" fx:id="BtnCategorie1" layoutX="34.0" layoutY="69.0" mnemonicParsing="false" prefWidth="268.0" text="Categorieën" />
-            <Button id="BtnZoeken" fx:id="BtnZoeken1" layoutX="34.0" layoutY="107.0" mnemonicParsing="false" prefWidth="268.0" text="Zoeken" />
+            <Button id="BtnCategorie" fx:id="BtnCategorie1" layoutX="34.0" layoutY="49.0" mnemonicParsing="false" prefWidth="268.0" text="Categorieën" />
+            <Button id="BtnZoeken" fx:id="BtnZoeken1" layoutX="34.0" layoutY="86.0" mnemonicParsing="false" prefWidth="268.0" text="Zoeken" />
             <Pane fx:id="paneMain1" layoutX="34.0" layoutY="142.0" prefHeight="91.0" prefWidth="268.0" styleClass="chatbars">
               <children>
                 <Label fx:id="textMainMessage1" layoutX="73.0" layoutY="61.0" text="Waarom GoChat boven Whatsapp" />
@@ -236,7 +236,7 @@
             <Button fx:id="BtnStarten" layoutX="121.0" layoutY="267.0" mnemonicParsing="false" prefWidth="200.0" text="Starten" />
           </children>
         </Pane>
-        <Pane id="ZoekPane" fx:id="paneCategorieen" layoutX="0.0" layoutY="40.0" prefHeight="453.0" prefWidth="335.0" visible="true">
+        <Pane id="ZoekPane" fx:id="paneCategorieen" layoutX="0.0" layoutY="40.0" prefHeight="453.0" prefWidth="335.0" visible="false">
           <children>
             <Label layoutX="33.0" layoutY="17.0" text="Categorieën op GoChat Forum" />
             <ListView fx:id="lbCategorieën" layoutX="33.0" layoutY="61.0" prefHeight="368.9998779296875" prefWidth="270.0" />
