@@ -14,6 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -31,7 +32,8 @@ public class SE41 extends Application {
         fxmlLoader.setResources(ResourceBundle.getBundle("resources.lang", Locale.FRENCH));
         Parent root = (Parent) fxmlLoader.load(location.openStream());
         //Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        
+        stage.getIcons().add(new Image(SE41.class.getResourceAsStream( "/resources/is_voice_chat.jpg" )));
+
         Scene scene = new Scene(root);
         
         stage.setScene(scene);

@@ -131,7 +131,6 @@ public class ChatController implements Initializable{
 
     @FXML 
     public void GoToGesprek() throws Exception{
-        System.out.println("Changin the stuff");
         this.PaneChat.setVisible(true);
         this.PaneChatSummary.setVisible(false);
         this.PaneProfile.setVisible(false);

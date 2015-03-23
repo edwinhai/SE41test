@@ -21,22 +21,26 @@
               <children>
                 <FlowPane fx:id="flowpaneMainChat" onMouseClicked="#toChatOptions" prefHeight="70.0" prefWidth="336.0">
                   <children>
-                    <Label fx:id="lbChat" prefHeight="70.0" prefWidth="336.0" text="chat" />
+                    <Label fx:id="lbChat" prefHeight="70.0" prefWidth="336.0" text="chat">
+                      <FlowPane.margin>
+                        <Insets left="10.0" fx:id="x4" />
+                      </FlowPane.margin>
+                    </Label>
                   </children>
                 </FlowPane>
                 <FlowPane fx:id="flowpaneMainColors" onMouseClicked="#toColorOptions" prefHeight="70.0" prefWidth="336.0">
                   <children>
-                    <Label fx:id="lblColor" prefHeight="70.0" prefWidth="335.0" text="%kleuren" />
+                    <Label fx:id="lblColor" prefHeight="70.0" prefWidth="335.0" text="%kleuren" FlowPane.margin="$x4" />
                   </children>
                 </FlowPane>
                 <FlowPane fx:id="flowpaneMainProfile" onMouseClicked="#toProfileOptions" prefHeight="70.0" prefWidth="336.0">
                   <children>
-                    <Label fx:id="lblProfile" prefHeight="70.0" prefWidth="335.0" text="%profiel" />
+                    <Label fx:id="lblProfile" prefHeight="70.0" prefWidth="335.0" text="%profiel" FlowPane.margin="$x4" />
                   </children>
                 </FlowPane>
                 <FlowPane fx:id="flowpaneMainLanguage" onMouseClicked="#toLanguageOptions" prefHeight="70.0" prefWidth="336.0">
                   <children>
-                    <Label fx:id="lblLanguage" prefHeight="70.0" prefWidth="336.0" text="%taal" />
+                    <Label fx:id="lblLanguage" prefHeight="70.0" prefWidth="336.0" text="%taal" FlowPane.margin="$x4" />
                   </children>
                 </FlowPane>
               </children>
@@ -49,13 +53,21 @@
               <children>
                 <FlowPane fx:id="flowpaneMute" prefHeight="84.0" prefWidth="335.0">
                   <children>
-                    <Label fx:id="lblMute" prefHeight="84.0" prefWidth="232.0" text="%stil" />
+                    <Label fx:id="lblMute" prefHeight="84.0" prefWidth="232.0" text="%stil">
+                      <FlowPane.margin>
+                        <Insets left="10.0" fx:id="x4" />
+                      </FlowPane.margin>
+                    </Label>
                     <CheckBox fx:id="checkboxMute" mnemonicParsing="false" text="%aan" />
                   </children>
                 </FlowPane>
                 <FlowPane fx:id="flowpaneChatFilter" prefHeight="84.0" prefWidth="335.0">
                   <children>
-                    <Label fx:id="lblFilter" prefHeight="84.0" prefWidth="232.0" text="filter" />
+                    <Label fx:id="lblFilter" prefHeight="84.0" prefWidth="232.0" text="filter">
+                      <FlowPane.margin>
+                        <Insets left="10.0" fx:id="x4" />
+                      </FlowPane.margin>
+                    </Label>
                     <CheckBox fx:id="checkboxChatFilter" mnemonicParsing="false" text="%aan" />
                   </children>
                 </FlowPane>
@@ -69,13 +81,21 @@
               <children>
                 <FlowPane fx:id="flowpaneProfileName" prefHeight="84.0" prefWidth="335.0">
                   <children>
-                    <Label fx:id="lblName" prefHeight="84.0" prefWidth="158.0" text="%naam" />
-                    <TextField fx:id="textfieldName" prefWidth="172.0" />
+                    <Label fx:id="lblName" prefHeight="84.0" prefWidth="158.0" text="%naam">
+                      <FlowPane.margin>
+                        <Insets left="10.0" fx:id="x4" />
+                      </FlowPane.margin>
+                    </Label>
+                    <TextField fx:id="textfieldName" prefWidth="137.0" />
                   </children>
                 </FlowPane>
                 <FlowPane fx:id="flowpaneProfilePhoto" prefHeight="84.0" prefWidth="335.0">
                   <children>
-                    <Label fx:id="lblPhoto" prefHeight="84.0" prefWidth="186.0" text="%foto" />
+                    <Label fx:id="lblPhoto" prefHeight="84.0" prefWidth="186.0" text="%foto">
+                      <FlowPane.margin>
+                        <Insets left="10.0" fx:id="x4" />
+                      </FlowPane.margin>
+                    </Label>
                     <Button fx:id="buttonBrowse" mnemonicParsing="false" text="%bladeren" />
                   </children>
                 </FlowPane>
@@ -89,7 +109,11 @@
               <children>
                 <FlowPane id="flowpaneMain" fx:id="flowpaneColorsColorblind" prefHeight="84.0" prefWidth="335.0">
                   <children>
-                    <Label fx:id="lblColorblind" prefHeight="84.0" prefWidth="232.0" text="%kleurenblind" />
+                    <Label fx:id="lblColorblind" prefHeight="84.0" prefWidth="232.0" text="%kleurenblind">
+                      <FlowPane.margin>
+                        <Insets left="10.0" fx:id="x4" />
+                      </FlowPane.margin>
+                    </Label>
                     <CheckBox fx:id="checkboxColorBlind" mnemonicParsing="false" text="%aan" />
                   </children>
                 </FlowPane>
@@ -103,7 +127,11 @@
               <children>
                 <FlowPane fx:id="flowpaneLanguageLanguage" minHeight="78.0" prefHeight="78.0" prefWidth="335.0">
                   <children>
-                    <Label fx:id="lblLanguage2" prefHeight="84.0" prefWidth="201.0" text="%taal" />
+                    <Label fx:id="lblLanguage2" prefHeight="84.0" prefWidth="201.0" text="%taal">
+                      <FlowPane.margin>
+                        <Insets left="10.0" fx:id="x4" />
+                      </FlowPane.margin>
+                    </Label>
                     <CheckBox fx:id="checkboxEnglish" mnemonicParsing="false" onAction="#switchLanguage" text="%engels" />
                   </children>
                 </FlowPane>
@@ -121,7 +149,7 @@
                     <Label prefHeight="66.0" prefWidth="213.0" text="Taylor Swift" />
                   </children>
                 </FlowPane>
-                <FlowPane minWidth="301.0" prefHeight="66.0" prefWidth="301.0" styleClass="sidebarflows">
+                <FlowPane minWidth="301.0" onMouseClicked="#toChat" prefHeight="66.0" prefWidth="301.0" styleClass="sidebarflows">
                   <children>
                     <Label prefHeight="66.0" prefWidth="271.0" text="Chat" />
                   </children>
@@ -132,7 +160,7 @@
                     <URL value="@StyleSheet.css" />
                   </stylesheets>
                 </FlowPane>
-                <FlowPane minWidth="301.0" padding="$x1" prefHeight="72.0" prefWidth="301.0" styleClass="sidebarflows">
+                <FlowPane minWidth="301.0" onMouseClicked="#toForum" padding="$x1" prefHeight="72.0" prefWidth="301.0" styleClass="sidebarflows">
                   <children>
                     <Label prefHeight="72.0" prefWidth="301.0" text="Forum" />
                   </children>
@@ -162,7 +190,7 @@
                 <Color blue="0.875" green="0.875" red="0.875" fx:id="x3" />
               </textFill>
             </Button>
-            <Pane fx:id="gridPane" />
+            <Pane HBox.hgrow="ALWAYS" fx:id="gridPane" />
             <Button font="$x2" mnemonicParsing="false" onAction="#backToMain" prefHeight="28.0" prefWidth="40.0" styleClass="topbuttons" text="&lt;-" textAlignment="LEFT" textFill="$x3" />
           </items>
           <stylesheets>

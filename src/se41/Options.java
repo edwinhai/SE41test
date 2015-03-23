@@ -35,6 +35,9 @@ public class Options extends Application {
     
     @Override
     public void start(Stage primaryStage) throws IOException {
+        if(primaryStage == null) {
+            return;
+        }
         URL location = getClass().getResource("FXMLOptions.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(location);
@@ -46,13 +49,14 @@ public class Options extends Application {
         //Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
-        
+
         primaryStage.setScene(scene);
         primaryStage.show();
         primaryStage.setMaxHeight(primaryStage.getHeight());
         primaryStage.setMaxWidth(primaryStage.getWidth());
         primaryStage.setMinHeight(primaryStage.getHeight());
         primaryStage.setMinWidth(primaryStage.getWidth());
+
     }
 
     /**

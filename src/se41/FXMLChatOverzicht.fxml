@@ -157,7 +157,7 @@
                 <Color blue="0.875" green="0.875" red="0.875" fx:id="x3" />
               </textFill>
             </Button>
-            <Pane fx:id="gridPane" />
+            <Pane HBox.hgrow="ALWAYS" fx:id="gridPane" />
             <Button font="$x2" mnemonicParsing="false" onMouseClicked="#returnToPrevious" prefHeight="28.0" prefWidth="40.0" styleClass="topbuttons" text="&lt;-" textAlignment="LEFT" textFill="$x3" />
           </items>
           <stylesheets>
